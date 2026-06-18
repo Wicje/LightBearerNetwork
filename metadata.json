@@ -1,0 +1,6 @@
+{
+  "name": "Light Bearers Network",
+  "description": "Kingdom Builders in the Marketplace",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
