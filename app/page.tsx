@@ -17,7 +17,12 @@ import {
   Home,
   Check,
   Star,
-  Users
+  Users,
+  ShieldCheck,
+  BookOpen,
+  Target,
+  X,
+  ChevronRight
 } from "lucide-react";
 
 export default function Page() {
@@ -59,20 +64,20 @@ export default function Page() {
              <span className="w-2.5 h-2.5 rounded-full border border-[#107C41] flex items-center justify-center opacity-80">
                 <div className="w-[3px] h-[3px] bg-[#107C41] rounded-full"></div>
              </span>
-             Marketplace Dominion
+             Taking God to the Marketplace
           </div>
 
-          <h1 className="text-6xl md:text-[7rem] font-bold text-gray-900 tracking-[-0.05em] font-display mb-8 leading-none">
-            the <span className="text-[#F2994A]">beginning</span>
+          <h1 className="text-5xl md:text-[5.5rem] font-bold text-gray-900 tracking-[-0.03em] font-display mb-8 leading-[1.05]">
+            A people rising to lead and build <span className="text-[#F2994A]">Global Institutions</span> for God in the Marketplace
           </h1>
 
-          <p className="text-[17px] md:text-[18px] text-gray-600 max-w-2xl mx-auto mb-10 leading-[1.7]">
-            God is raising a generation of young believers to climb to their seat of dominance and legislate Kingdom Orders in their mountain of influence.
+          <p className="text-[17px] md:text-[18px] text-gray-600 max-w-3xl mx-auto mb-10 leading-[1.7]">
+            God is raising a generation of young kingdom builders to climb to their seat of dominance and legislate kingdom orders and patterns in their field of enterprise.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button className="bg-[#107C41] hover:bg-[#0c5c30] text-white px-8 py-3.5 rounded-[4px] text-[12px] font-mono font-bold tracking-[0.1em] flex items-center gap-2 transition-all w-full sm:w-auto justify-center uppercase">
-              Join the Community &rarr;
+              Join us Today &rarr;
             </button>
             <button className="bg-transparent border border-gray-800 text-gray-800 px-8 py-3.5 rounded-[4px] text-[12px] font-mono font-bold tracking-[0.1em] hover:bg-gray-100 transition-all w-full sm:w-auto justify-center shadow-sm uppercase">
               Explore Academy
@@ -97,13 +102,13 @@ export default function Page() {
           <div className="bg-white rounded-3xl p-10 md:p-12 shadow-sm border border-gray-100 relative">
             <Quote className="text-[#E5E7EB] h-16 w-16 absolute top-8 left-8 transform -scale-x-100" fill="currentColor" />
             <h3 className="text-[26px] md:text-[32px] font-display font-medium text-gray-900 leading-[1.3] mb-12 relative z-10 tracking-tight mt-10">
-              "God is raising a generation of young believers to climb to their seat of dominance and legislate Kingdom Orders in their mountain of influence."
+              "In this day and time when the world keeps getting darker, it is that set time for Believers to rise in their seat of dominance across all spheres of influence in the Marketplace."
             </h3>
             <div className="flex items-center gap-4 relative z-10">
               <div className="w-12 h-12 rounded-full bg-[#107C41] flex items-center justify-center text-white font-bold text-lg shadow-inner">MT</div>
               <div>
-                <h4 className="font-mono text-[#107C41] tracking-[0.1em] text-[11px] font-bold uppercase">MACAULAY TEKKY</h4>
-                <p className="text-gray-900 font-mono text-[10px] tracking-wider uppercase mt-1">Founder, LBN</p>
+                <h4 className="font-mono text-[#107C41] tracking-[0.1em] text-[11px] font-bold uppercase">Matthew 5:14-16</h4>
+                <p className="text-gray-900 font-mono text-[10px] tracking-wider uppercase mt-1">Scripture</p>
               </div>
             </div>
           </div>
@@ -112,7 +117,8 @@ export default function Page() {
           <div className="lg:pl-8">
             <h2 className="text-4xl md:text-[44px] font-bold text-gray-900 mb-8 font-display tracking-tight">Why We Exist</h2>
             <div className="text-gray-600 text-[16px] leading-[1.8] space-y-6">
-              <p>No more playing mediocrity. No more playing small games but now interfering with orders, systems and policies that control the earth. We are raising a people that will live according to the likeness of God showing forth His dimension of Dominion across all spheres of influence in the Marketplace.</p>
+              <p>No more playing mediocrity. No more playing small games but now rising to interfer with orders, systems and policies that control the earth.</p>
+              <p>We are raising a people that will be skillful in hand and build Goshen Cities for the Manifestation of the Kingdom.</p>
             </div>
             <div className="flex flex-wrap gap-3 mt-10">
               <span className="px-4 py-2 bg-[#E5E7EB] text-gray-700 text-[10px] font-mono font-bold rounded-full uppercase tracking-widest">Kingdom Culture</span>
@@ -128,21 +134,19 @@ export default function Page() {
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-[44px] font-bold text-gray-900 mb-6 font-display tracking-tight">
-              Spheres of <span className="text-[#F2994A]">Influence</span>
+              Core <span className="text-[#F2994A]">Values</span>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto text-[17px] leading-[1.6]">
-              We are raising a people that will live according to the likeness of God showing forth His dimension of Dominion across all spheres of influence.
+              Principles that guide our mission to reflect Kingdom Culture in the Marketplace.
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-5 md:gap-6">
             {[
-              { name: "Business", icon: Briefcase },
-              { name: "Government", icon: Building2 },
-              { name: "Education", icon: GraduationCap },
-              { name: "Religion", icon: Heart },
-              { name: "Arts &\nCulture", icon: Palette },
-              { name: "Media", icon: Tv },
-              { name: "Family", icon: Home },
+              { name: "God's\nStandard", icon: ShieldCheck },
+              { name: "Excellence", icon: Star },
+              { name: "Global\nThinking", icon: Globe },
+              { name: "Learning\n& Execution", icon: BookOpen },
+              { name: "Social\nNetworking", icon: Users },
             ].map((s, i) => (
               <div key={i} className="bg-white p-6 rounded-xl shadow-[0_2px_10px_rgba(0,0,0,0.02)] border border-gray-100 flex flex-col items-center justify-center flex-1 min-w-[140px] max-w-[150px] aspect-square hover:-translate-y-1 hover:shadow-md transition-all duration-300">
                 <div className="w-14 h-14 rounded-full bg-[#FFF5EB] flex items-center justify-center text-[#F2994A] mb-4">
@@ -151,6 +155,58 @@ export default function Page() {
                 <h3 className="font-mono font-bold text-gray-900 text-[9px] uppercase tracking-[0.1em] text-center whitespace-pre-line">{s.name}</h3>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHO IS THIS FOR */}
+      <section className="bg-white py-32 border-t border-gray-200/50">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-[44px] font-bold text-gray-900 mb-6 font-display tracking-tight">
+              Who is this <span className="text-[#F2994A]">Community</span> designed for?
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto text-[17px] leading-[1.6]">
+              This community is designed for builders, people who know they are called to build, and are ready to build Global Brands that will reflect Kingdom Culture in the Marketplace.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-10 lg:gap-16">
+            <div className="bg-[#EAF5ED] p-10 rounded-[20px] border border-[#107C41]/10">
+              <h3 className="text-2xl font-bold text-[#107C41] mb-8 font-display">This is for you if:</h3>
+              <ul className="space-y-6">
+                {[
+                  "You want to express God via your skill/works in the marketplace",
+                  "You're not satisfied with smallness and average and you want to express God's excellence via your works",
+                  "You want to build a Global Institution (Brand) that will stand the test of time",
+                  "You want to learn how to create incomes streams, build wealth paths the Kingdom Way",
+                  "You want to be open to structure, discipline and accountability",
+                  "You want to surround yourself with a supportive community of like-minded people serious about growth and execution"
+                ].map((item, idx) => (
+                  <li key={idx} className="flex gap-4">
+                    <CheckCircle2 className="w-6 h-6 text-[#107C41] shrink-0 fill-current bg-white rounded-full border border-white" fill="white" />
+                    <span className="text-gray-800 leading-relaxed text-[15px]">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="bg-[#FFF5EB] p-10 rounded-[20px] border border-[#F2994A]/10">
+              <h3 className="text-2xl font-bold text-[#F2994A] mb-8 font-display">This is not for you if:</h3>
+              <ul className="space-y-6">
+                {[
+                  "You do not have the purposes of God at heart",
+                  "You are not interested in building any Global Institutions",
+                  "You only think about survival and not still ready to change",
+                  "You like comfort over work and not ready to work out your results"
+                ].map((item, idx) => (
+                  <li key={idx} className="flex gap-4">
+                    <X className="w-6 h-6 text-[#F2994A] shrink-0 bg-white rounded-full p-1 border border-white shadow-sm" />
+                    <span className="text-gray-800 leading-relaxed text-[15px]">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -167,47 +223,96 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-[#484848] rounded-2xl p-8 border border-[#555] flex flex-col">
-              <div className="w-10 h-10 rounded bg-[#107C41] flex items-center justify-center mb-6">
-                <Users className="w-5 h-5 text-white" />
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+            {/* Open Community */}
+            <div className="bg-[#484848] rounded-[24px] p-10 border border-[#555] flex flex-col relative overflow-hidden group">
+              <div className="absolute top-0 right-0 p-8 opacity-5 -translate-y-1/4 translate-x-1/4 group-hover:scale-110 transition-transform duration-500">
+                <Users className="w-48 h-48 text-white" />
               </div>
-              <h3 className="text-[#F2994A] text-xl font-bold mb-3">New Program</h3>
-              <p className="text-gray-300 text-[15px] mb-6 flex-1">Description here</p>
-              <div className="flex items-center gap-2 text-gray-300 text-sm mb-8">
-                <CheckCircle2 className="w-4 h-4 text-gray-400" /> Feature 1
+              <div className="relative z-10">
+                <div className="w-12 h-12 rounded bg-[#107C41] flex items-center justify-center mb-8">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-[#F2994A] text-3xl font-display font-bold mb-4">Open Community</h3>
+                <p className="text-gray-300 text-[16px] mb-4 leading-relaxed font-medium">This is your weekly system for push to become a First Class Individual.</p>
+                <p className="text-gray-400 text-[15px] mb-8 leading-relaxed">
+                  Before you can build a Global Institution (Brand) with Kingdom Culture, you must first know and understand your Personal Identity.
+                  Inside the Open Community, a structured system is curated to help shape your mentality and show you possibilities that exist.
+                </p>
+                
+                <div className="space-y-6 mb-10">
+                  <h4 className="font-mono text-[#F2994A] text-[11px] uppercase tracking-[0.15em] font-bold pb-2 border-b border-[#555]">Weekly Breakdown</h4>
+                  {[
+                    { day: "Monday", focus: "Identity & Alignment", desc: "Start your week with powerful affirmations that align your mindset for Dominion." },
+                    { day: "Wednesday", focus: "Clarity & Direction", desc: "Get our weekly letter breaking down mindset patterns, sharing growth strategies that give you an edge in today's marketplace environment." },
+                    { day: "Friday", focus: "Intentional Learning", desc: "Using the community focus points you learn on diverse subject matters that have direct impact and making you a better builder." },
+                    { day: "Saturday", focus: "Spiritual Activation", desc: "Join focused prayer sessions to strengthen your spiritual altar for divine wisdom and guidance." },
+                    { day: "Monthly", focus: "Growth & Exposure", desc: "Plug into our General Assembly for deeper interactive teachings and connections." }
+                  ].map((schedule, idx) => (
+                    <div key={idx} className="flex gap-4">
+                      <div className="w-[100px] shrink-0">
+                        <span className="bg-[#5A5A5A] text-[#F2994A] px-2 py-1 rounded text-[10px] font-mono font-bold uppercase tracking-wider block text-center">
+                          {schedule.day}
+                        </span>
+                      </div>
+                      <div>
+                        <h5 className="text-white font-bold text-[14px] mb-1">{schedule.focus}</h5>
+                        <p className="text-gray-400 text-[13px] leading-relaxed">{schedule.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                
+                <button className="w-full bg-[#107C41] hover:bg-[#0c5c30] text-white py-4 rounded-[4px] font-mono text-[11px] uppercase tracking-[0.15em] font-bold transition-colors flex items-center justify-center gap-2 mt-auto">
+                  Start your growth journey now <ChevronRight className="w-4 h-4" />
+                </button>
               </div>
-              <button className="w-full bg-[#5A5A5A] hover:bg-[#666] border border-[#6A6A6A] text-white py-3.5 rounded font-mono text-[10px] uppercase tracking-[0.15em] font-bold transition-colors">
-                Access via Academy
-              </button>
             </div>
 
-            <div className="bg-[#484848] rounded-2xl p-8 border border-[#555] flex flex-col">
-              <div className="w-10 h-10 rounded bg-[#107C41] flex items-center justify-center mb-6">
-                <GraduationCap className="w-5 h-5 text-white" />
+            <div className="flex flex-col gap-8 lg:gap-12">
+              {/* Light Bearers Academy */}
+              <div className="bg-[#484848] rounded-[24px] p-10 border border-[#555] flex flex-col relative overflow-hidden group flex-1">
+                <div className="absolute top-0 right-0 p-8 opacity-5 -translate-y-1/4 translate-x-1/4 group-hover:scale-110 transition-transform duration-500">
+                  <GraduationCap className="w-48 h-48 text-white" />
+                </div>
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="w-12 h-12 rounded bg-[#F2994A] flex items-center justify-center mb-8">
+                    <GraduationCap className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-[#107C41] text-3xl font-display font-bold mb-4">Light Bearers Academy</h3>
+                  <p className="text-gray-400 text-[15px] mb-8 leading-relaxed">
+                    Designed to equip believers with structured teachings, frameworks, and actionable strategies for marketplace dominance.
+                  </p>
+                  
+                  <div className="mt-auto pt-8 flex items-center justify-center border-t border-[#555] border-dashed">
+                    <span className="text-[#F2994A] font-mono text-[12px] uppercase tracking-[0.2em] font-bold bg-[#F2994A]/10 px-4 py-2 rounded-full">
+                      Coming Soon
+                    </span>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-[#F2994A] text-xl font-bold mb-3">Leadership Training</h3>
-              <p className="text-gray-300 text-[15px] mb-6 flex-1">Description here</p>
-              <div className="flex items-center gap-2 text-gray-300 text-sm mb-8">
-                <CheckCircle2 className="w-4 h-4 text-gray-400" /> Feature 1
-              </div>
-              <button className="w-full bg-[#5A5A5A] hover:bg-[#666] border border-[#6A6A6A] text-white py-3.5 rounded font-mono text-[10px] uppercase tracking-[0.15em] font-bold transition-colors">
-                Access via Academy
-              </button>
-            </div>
 
-            <div className="bg-[#484848] rounded-2xl p-8 border border-[#555] flex flex-col">
-              <div className="w-10 h-10 rounded bg-[#107C41] flex items-center justify-center mb-6">
-                <Globe className="w-5 h-5 text-white" />
+              {/* Engaging Room */}
+              <div className="bg-[#484848] rounded-[24px] p-10 border border-[#555] flex flex-col relative overflow-hidden group flex-1">
+                <div className="absolute top-0 right-0 p-8 opacity-5 -translate-y-1/4 translate-x-1/4 group-hover:scale-110 transition-transform duration-500">
+                  <Target className="w-48 h-48 text-white" />
+                </div>
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="w-12 h-12 rounded bg-gray-600 flex items-center justify-center mb-8">
+                    <Target className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-white text-3xl font-display font-bold mb-4">Engaging Room</h3>
+                  <p className="text-gray-400 text-[15px] mb-8 leading-relaxed">
+                    A highly focused, interactive space designed for personalized problem-solving, strategic mastermind sessions, and direct mentorship.
+                  </p>
+                  
+                  <div className="mt-auto pt-8 flex items-center justify-center border-t border-[#555] border-dashed">
+                    <span className="text-gray-400 font-mono text-[12px] uppercase tracking-[0.2em] font-bold bg-gray-600/30 px-4 py-2 rounded-full">
+                      Coming Soon
+                    </span>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-[#F2994A] text-xl font-bold mb-3">Global Influence</h3>
-              <p className="text-gray-300 text-[15px] mb-6 flex-1">Description here</p>
-              <div className="flex items-center gap-2 text-gray-300 text-sm mb-8">
-                <CheckCircle2 className="w-4 h-4 text-gray-400" /> Feature 1
-              </div>
-              <button className="w-full bg-[#5A5A5A] hover:bg-[#666] border border-[#6A6A6A] text-white py-3.5 rounded font-mono text-[10px] uppercase tracking-[0.15em] font-bold transition-colors">
-                Access via Academy
-              </button>
             </div>
           </div>
         </div>
@@ -268,6 +373,23 @@ export default function Page() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* VISIONEER SECTION */}
+      <section className="bg-white py-32 border-t border-gray-200/50">
+        <div className="max-w-[1000px] mx-auto px-6 text-center">
+          <Quote className="text-[#EAF5ED] h-20 w-20 mx-auto mb-10 transform -scale-x-100" fill="currentColor" />
+          <h2 className="text-3xl md:text-5xl font-display font-medium text-gray-900 leading-[1.3] mb-12 tracking-tight">
+            Macaulay Tekevwe is a visioneer seeking to raise <span className="text-[#107C41] font-bold">Brand Owners, Industry Experts, Business Men/Women</span> who will build Global Institutions with Kingdom Culture.
+          </h2>
+          <div className="flex flex-col items-center justify-center gap-4 mt-12">
+            <div className="w-16 h-16 rounded-full bg-[#107C41] flex items-center justify-center text-white font-bold text-2xl shadow-inner">MT</div>
+            <div>
+              <h4 className="font-mono text-gray-900 tracking-[0.15em] text-[12px] font-bold uppercase">Macaulay Tekevwe</h4>
+              <p className="text-[#F2994A] font-mono text-[10px] tracking-wider uppercase mt-1">Visioneer</p>
+            </div>
           </div>
         </div>
       </section>
