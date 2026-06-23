@@ -225,11 +225,11 @@ export default function Page() {
 
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             {/* Open Community */}
-            <div className="bg-[#484848] rounded-[24px] p-6 md:p-10 border border-[#555] flex flex-col relative overflow-hidden group">
+            <div className="bg-[#484848] rounded-[24px] p-6 md:p-10 border border-[#555] flex flex-col relative overflow-hidden group h-fit md:sticky md:top-24">
               <div className="absolute top-0 right-0 p-8 opacity-5 -translate-y-1/4 translate-x-1/4 group-hover:scale-110 transition-transform duration-500">
                 <Users className="w-48 h-48 text-white" />
               </div>
-              <div className="relative z-10">
+              <div className="relative z-10 flex flex-col h-full">
                 <div className="w-12 h-12 rounded bg-[#107C41] flex items-center justify-center mb-6 md:mb-8">
                   <Users className="w-6 h-6 text-white" />
                 </div>
@@ -240,32 +240,9 @@ export default function Page() {
                   Inside the Open Community, a structured system is curated to help shape your mentality and show you possibilities that exist.
                 </p>
                 
-                <div className="space-y-6 mb-10">
-                  <h4 className="font-mono text-[#F2994A] text-[11px] uppercase tracking-[0.15em] font-bold pb-2 border-b border-[#555]">Weekly Breakdown</h4>
-                  {[
-                    { day: "Monday", focus: "Identity & Alignment", desc: "Start your week with powerful affirmations that align your mindset for Dominion." },
-                    { day: "Wednesday", focus: "Clarity & Direction", desc: "Get our weekly letter breaking down mindset patterns, sharing growth strategies that give you an edge in today's marketplace environment." },
-                    { day: "Friday", focus: "Intentional Learning", desc: "Using the community focus points you learn on diverse subject matters that have direct impact and making you a better builder." },
-                    { day: "Saturday", focus: "Spiritual Activation", desc: "Join focused prayer sessions to strengthen your spiritual altar for divine wisdom and guidance." },
-                    { day: "Monthly", focus: "Growth & Exposure", desc: "Plug into our General Assembly for deeper interactive teachings and connections." }
-                  ].map((schedule, idx) => (
-                    <div key={idx} className="flex flex-col sm:flex-row gap-2 sm:gap-4">
-                      <div className="w-auto sm:w-[100px] shrink-0 self-start sm:self-auto">
-                        <span className="bg-[#5A5A5A] text-[#F2994A] px-2 py-1 rounded text-[10px] font-mono font-bold uppercase tracking-wider block text-center inline-block sm:block">
-                          {schedule.day}
-                        </span>
-                      </div>
-                      <div>
-                        <h5 className="text-white font-bold text-[14px] mb-1">{schedule.focus}</h5>
-                        <p className="text-gray-400 text-[13px] leading-relaxed">{schedule.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                
-                <button className="w-full bg-[#107C41] hover:bg-[#0c5c30] text-white py-4 rounded-[4px] font-mono text-[11px] uppercase tracking-[0.15em] font-bold transition-colors flex items-center justify-center gap-2 mt-auto">
-                  Start your growth journey now <ChevronRight className="w-4 h-4" />
-                </button>
+                <Link href="/open-community" className="w-full bg-[#107C41] hover:bg-[#0c5c30] text-white py-4 rounded-[4px] font-mono text-[11px] uppercase tracking-[0.15em] font-bold transition-colors flex items-center justify-center gap-2 mt-2 relative z-20">
+                  Explore Open Community <ChevronRight className="w-4 h-4" />
+                </Link>
               </div>
             </div>
 
@@ -329,16 +306,16 @@ export default function Page() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             <div className="aspect-square bg-gray-200 rounded-2xl overflow-hidden relative">
-              <Image src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800" alt="Gallery" fill className="object-cover" referrerPolicy="no-referrer" />
+              <Image src="https://drive.google.com/uc?export=view&id=1oW_8eyaaLgCGJM3zHfFRJIOA9utn6WUS" alt="Gallery 1" fill className="object-cover" referrerPolicy="no-referrer" />
             </div>
             <div className="aspect-square bg-gray-200 rounded-2xl overflow-hidden relative">
-              <Image src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=800" alt="Gallery" fill className="object-cover" referrerPolicy="no-referrer" />
+              <Image src="https://drive.google.com/uc?export=view&id=1UKW9Xa9eMXZhOY2oJ9xq07SJJelKQE2J" alt="Gallery 2" fill className="object-cover" referrerPolicy="no-referrer" />
             </div>
             <div className="aspect-square bg-gray-200 rounded-2xl overflow-hidden relative">
-              <Image src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&q=80&w=800" alt="Gallery" fill className="object-cover" referrerPolicy="no-referrer" />
+              <Image src="https://drive.google.com/uc?export=view&id=1hocBSjfaxgXhkQF3Qczp-R_IBuECKzub" alt="Gallery 3" fill className="object-cover" referrerPolicy="no-referrer" />
             </div>
             <div className="aspect-square bg-gray-200 rounded-2xl overflow-hidden relative">
-              <Image src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800" alt="Gallery" fill className="object-cover" referrerPolicy="no-referrer" />
+              <Image src="https://drive.google.com/uc?export=view&id=14N2aW3hKRkq2ySqQCMXYI35LIOkF8DMM" alt="Gallery 4" fill className="object-cover" referrerPolicy="no-referrer" />
             </div>
           </div>
         </div>
