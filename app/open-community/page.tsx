@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "motion/react";
 import {
   Users,
   ChevronRight,
@@ -21,7 +24,12 @@ export default function OpenCommunityPage() {
 
       {/* HERO */}
       <section className="pt-40 md:pt-48 pb-20 px-6">
-        <div className="max-w-[1000px] mx-auto">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-[1000px] mx-auto"
+        >
           <div className="w-16 h-16 rounded-xl bg-[#107C41] flex items-center justify-center mb-10">
             <Users className="w-8 h-8 text-white" />
           </div>
@@ -34,10 +42,10 @@ export default function OpenCommunityPage() {
             This is your weekly system for push to become a First Class Individual. Before you can build a Global Institution (Brand) with Kingdom Culture, you must first know and understand your Personal Identity.
           </p>
 
-          <button className="bg-[#F2994A] hover:bg-[#df8b40] text-white px-8 py-4 rounded-[4px] font-mono font-bold tracking-[0.1em] transition-colors uppercase text-[12px] flex items-center gap-2 justify-center w-full sm:w-auto">
+          <button className="bg-[#F2994A] hover:bg-[#df8b40] text-white px-8 py-4 rounded-[4px] font-mono font-bold tracking-[0.1em] transition-all uppercase text-[12px] flex items-center gap-2 justify-center w-full sm:w-auto hover:scale-105 active:scale-95">
             Join the Community <ChevronRight className="w-4 h-4" />
           </button>
-        </div>
+        </motion.div>
       </section>
 
       {/* DETAILED CONTENT */}
@@ -63,9 +71,16 @@ export default function OpenCommunityPage() {
                 { day: "Saturday", focus: "Spiritual Activation", desc: "Join focused prayer sessions to strengthen your spiritual altar for divine wisdom and guidance." },
                 { day: "Monthly", focus: "Growth & Exposure", desc: "Plug into our General Assembly for deeper interactive teachings and connections." }
               ].map((schedule, idx) => (
-                <div key={idx} className="flex flex-col sm:flex-row gap-3 sm:gap-6">
+                <motion.div 
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  key={idx} 
+                  className="flex flex-col sm:flex-row gap-3 sm:gap-6 hover:translate-x-2 transition-transform duration-300"
+                >
                   <div className="w-auto sm:w-[100px] shrink-0 sm:pt-1 inline-flex self-start">
-                    <span className="bg-[#5A5A5A] text-[#F2994A] px-3 py-1.5 rounded text-[11px] font-mono font-bold uppercase tracking-wider block text-center">
+                    <span className="bg-[#5A5A5A] text-[#F2994A] px-3 py-1.5 rounded text-[11px] font-mono font-bold uppercase tracking-wider block text-center shadow-sm">
                       {schedule.day}
                     </span>
                   </div>
@@ -73,7 +88,7 @@ export default function OpenCommunityPage() {
                     <h5 className="text-white font-bold text-[16px] mb-2">{schedule.focus}</h5>
                     <p className="text-gray-400 text-[14px] md:text-[15px] leading-relaxed">{schedule.desc}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

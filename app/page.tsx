@@ -1,5 +1,9 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, AnimatePresence } from "motion/react";
 import {
   Play,
   Quote,
@@ -22,10 +26,25 @@ import {
   BookOpen,
   Target,
   X,
-  ChevronRight
+  ChevronRight,
+  Menu
 } from "lucide-react";
 
 export default function Page() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [mobileMenuOpen]);
+
   return (
     <div className="min-h-screen flex flex-col font-sans text-gray-900 bg-[#FAFAFA] selection:bg-[#F2994A] selection:text-white">
       {/* HEADER */}
@@ -46,14 +65,68 @@ export default function Page() {
             <Link href="#" className="hover:text-[#F2994A] transition-colors">Community</Link>
           </nav>
 
-          <div className="flex items-center gap-6 sm:gap-8 font-mono text-[11px] uppercase tracking-[0.15em]">
-            <button className="font-bold text-gray-800 hover:text-[#F2994A] hidden sm:block transition-colors">Login</button>
+          <div className="hidden lg:flex items-center gap-6 sm:gap-8 font-mono text-[11px] uppercase tracking-[0.15em]">
+            <button className="font-bold text-gray-800 hover:text-[#F2994A] transition-colors">Login</button>
             <button className="bg-[#F2994A] hover:bg-[#df8b40] text-white px-5 py-2.5 sm:px-7 sm:py-3 rounded-[3px] font-bold transition-colors shadow-sm">
               Join the Network
             </button>
           </div>
+
+          {/* MOBILE MENU TOGGLE */}
+          <button 
+            className="lg:hidden p-2 text-gray-800 hover:text-[#F2994A] transition-colors"
+            onClick={() => setMobileMenuOpen(true)}
+          >
+            <Menu className="w-6 h-6" />
+          </button>
         </div>
       </header>
+
+      {/* MOBILE MENU OVERLAY */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[60] bg-[#FAFAFA] flex flex-col"
+          >
+            <div className="px-6 h-[88px] flex items-center justify-between border-b border-gray-100">
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 bg-[#F2994A] rounded text-white font-bold flex items-center justify-center text-xs tracking-widest shadow-sm">
+                  LBN
+                </div>
+                <span className="font-bold text-[#F2994A] tracking-tight text-xl">LBN</span>
+              </div>
+              <button 
+                className="p-2 text-gray-800 hover:text-[#F2994A] transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            
+            <div className="flex-1 overflow-y-auto px-6 py-12 flex flex-col gap-8">
+              <nav className="flex flex-col gap-6 font-mono text-[13px] uppercase tracking-[0.2em] text-gray-800">
+                <Link href="#" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#F2994A] transition-colors border-b border-gray-100 pb-4">Academy</Link>
+                <Link href="#" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#F2994A] transition-colors border-b border-gray-100 pb-4">Spheres</Link>
+                <Link href="#" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#F2994A] transition-colors border-b border-gray-100 pb-4">Values</Link>
+                <Link href="#" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#F2994A] transition-colors border-b border-gray-100 pb-4">Pathways</Link>
+                <Link href="#" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#F2994A] transition-colors border-b border-gray-100 pb-4">Community</Link>
+              </nav>
+
+              <div className="flex flex-col gap-4 font-mono text-[11px] uppercase tracking-[0.15em] mt-auto pb-8">
+                <button onClick={() => setMobileMenuOpen(false)} className="bg-[#F2994A] text-white px-7 py-4 rounded-[3px] font-bold shadow-sm text-center">
+                  Join the Network
+                </button>
+                <button onClick={() => setMobileMenuOpen(false)} className="font-bold text-gray-800 py-4 border border-gray-200 rounded-[3px] text-center">
+                  Login
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* HERO */}
       <section className="relative pt-32 md:pt-[220px] pb-16 md:pb-24 overflow-hidden w-full flex flex-col items-center flex-1">
@@ -410,7 +483,15 @@ export default function Page() {
                 color: "bg-gray-100 text-gray-600"
               }
             ].map((t, i) => (
-              <div key={i} className="break-inside-avoid bg-white p-8 md:p-10 rounded-[20px] shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition-shadow">
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="break-inside-avoid bg-white p-8 md:p-10 rounded-[20px] shadow-sm border border-gray-100 flex flex-col hover:shadow-xl transition-all cursor-default"
+              >
                 <div className="flex gap-1 text-[#F2994A] mb-8">
                   {[1, 2, 3, 4, 5].map(s => <Star key={s} className="w-4 h-4 fill-current" />)}
                 </div>
@@ -428,7 +509,7 @@ export default function Page() {
                     <p className="text-[#F2994A] font-mono text-[9px] uppercase tracking-wider mt-1">{t.role}</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
