@@ -330,19 +330,99 @@ export default function Page() {
             </h2>
             <p className="text-gray-600 text-[16px] md:text-[17px]">Real stories from real people in our community.</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
             {[
-              { name: "Sarah Jenkins", role: "Business Sphere", text: "\"This community has completely transformed how I view my career. I now see my work as a ministry.\"" },
-              { name: "David Chen", role: "Media Sphere", text: "\"The academy teachings provided the practical steps I needed to step into leadership in my industry.\"" },
-              { name: "Emily Thorne", role: "Education Sphere", text: "\"Finding a group of like-minded believers who are ambitious yet grounded in faith has been invaluable.\"" }
+              {
+                name: "Ugochi Umeugo",
+                role: "Community Manager",
+                text: "Light Bearers Network has made me better from the physical events to the virtual events.\n\nMy highlights are the physical events mostly where people thriving in their careers share their story.\n\nMy highlights from being part of this was The Becoming Conference. Listening to Gutsy Woman and Okosa Lawrence share their stories showed me possibilities.\n\nBeing a member of the planning process and seeing it become a reality made me fulfilled.\n\nI'm also privileged to serve in this institution as I keep growing and that has very much impacted my life.",
+                initials: "UU",
+                color: "bg-[#EAF5ED] text-[#107C41]"
+              },
+              {
+                name: "Henrietta Odinaka",
+                role: "Team Lead",
+                text: "Light Bearers Network has changed certain bad behaviors I used to have. I'm speaking from the office of a Light Bearers Team Lead. My life has been blessed in so many ways through Light Bearers Network.\n\nI used to be an inconsistent team lead who didn't keep to her word, missed important meetings without prior notice, procrastinated, and failed to stick to deadlines. I wasn't taking responsibility.\n\nMy leader, Macaulay Tekevwe, kept correcting and scolding me over and over again. She put me in a different role after identifying my strength even with my inconsistency. With her constant talks and guidance, I became a better person.\n\nToday, I can confidently say that I am consistent. I keep my word. I stick to deadlines. I communicate early and seek permission whenever necessary. I make sure I attend meetings. Above all, I have decided to run with the vision of this organization.\n\nI am deeply grateful to God for giving me the privilege of leading a team in Light Bearers Network. And to Ma Tekky, thank you for not giving up on me.",
+                initials: "HO",
+                color: "bg-[#FFF5EB] text-[#F2994A]"
+              },
+              {
+                name: "Tochukwu Agu",
+                role: "Member",
+                text: "I am a member of this amazing community, Light Bearers Network.\n\nFirst of all, I want to give a special shout out 💚 to our Leader in Light Bearers Network. Miss Macaulay Tekevwe has always been a great source of Inspiration to me ❤️\n\nIn the LBN community, some of the activities I love so much includes Daily Affirmations, Online Classes which are very impactful e.g \"Financial Intelligence\", \"Building Relationships\", Online prayers amongst others.\n\nIt has been very impactful because it gives me the opportunity to learn everyday and also train my mind on how to be the best version of myself.\n\nGod bless all those who are part of the Light Bearers Network.",
+                initials: "TA",
+                color: "bg-blue-50 text-blue-600"
+              },
+              {
+                name: "Prince Onyenekwe",
+                role: "Member",
+                text: "First off, Our Founder Ma'am Tekky is doing really great with the community. And since I joined, I've experienced a shift in my mindset. That I believe is the core of personal growth and development. Once the mind is right, execution follows.\n\nThe way I see myself, my Brand, and Business as a Christian generally has transformed.\n\nThere's been this notion about Christians being poor, not dominating the marketplace, firms, industries and generally wherever they find themselves.\n\nThe Light Bearers Community has shown me that it's a dirty lie.\n\nAs Christians were even more advantaged to rule and dominate spheres of life.",
+                initials: "PO",
+                color: "bg-purple-50 text-purple-600"
+              },
+              {
+                name: "Excel Iyere",
+                role: "Member",
+                text: "I joined LBN early this year as a young lady with so many dreams, plans, and visions weighing on my shoulders. Yet, I couldn't seem to put any of them into action or find the balance needed to move forward.\n\nHowever, over the past few months, especially after participating in the Monthly General Assembly, \"Bold Steps,\" and other insightful gatherings. I have been amazed by the new version of myself and the audacious steps I have taken toward achieving these dreams.\n\nThank you so much for creating this incredible platform dedicated to repositioning Christians in the marketplace, not merely as consumers, but as creators and light bearers. 🔥❤️🌹.\n\nI am truly grateful for the transformation, growth, and clarity I have experienced through this community.",
+                initials: "EI",
+                color: "bg-pink-50 text-pink-600"
+              },
+              {
+                name: "Usulor Chinenye",
+                role: "Member",
+                text: "I can't recall where I heard about Light Bearers Network from but somehow it resonated with me, because in this phase of my life I'm chasing growth with everything in me.\n\nAt the time I joined I was struggling with these;\n1. Not sure what I would do with the course I'm studying.\n2. Inconsistency in my relationship with God; not sure if I wanted to do this Jesus thing for real.\n3. I was finding it hard to pitch my business ideas to friends, mentors and family.\n4. It was difficult to come and speak in a group even when what I have to say is valuable. To pictures of myself was harder.\n\nI can't forget the morning after reading the LBN Weekly Letter and Affirmation, I asked myself \"Vicky what is holding you back?\" I searched deeply and I found things I didn't think or realized was still residing in my soul.\n\nThis finding pushed me closer to the Holy Spirit asking Him to help because I can't afford to not fulfill destiny or live without unlocking every potential in my arsenal.\n\nThat week I put my foot down; started my business; learning those skills I have always wanted to have; graphics design, data analysis, video editing.\n\nI also was able to pitch my hair care product line to my girls every where around me and the demand for these products have not stopped.\n\nReally the Weekly Wednesday Letters are doing a whole lot for me.\n\nThank you Miss Tekky.",
+                initials: "UC",
+                color: "bg-teal-50 text-teal-600"
+              },
+              {
+                name: "Ogbonna Nelson",
+                role: "Member",
+                text: "I want to thank the Light Bearers Network for the impact made in my life.\n\nHaving an opportunity to be in this community, I've gotten Mentorship and one thing I've learnt is how to achieve a long term goal.\n\nI've also learnt how to convince and get customers into buying a product that one offers, how to create and build a brand from scratch and how to have different packages that will suite your customers satisfaction.\n\nI've been learning a lot on how to sell my skill.\n\nThank you Light Bearers Network",
+                initials: "ON",
+                color: "bg-indigo-50 text-indigo-600"
+              },
+              {
+                name: "Anonymous",
+                role: "Member",
+                text: "LBN has helped me see a new light about Kingdom Financing.",
+                initials: "AN",
+                color: "bg-gray-100 text-gray-600"
+              },
+              {
+                name: "Anonymous",
+                role: "Member",
+                text: "LBN has made know that Excellence must be the only way I do things.",
+                initials: "AN",
+                color: "bg-gray-100 text-gray-600"
+              },
+              {
+                name: "Anonymous",
+                role: "Member",
+                text: "The newsletters has helped me to do a lot of mind revamp. I've started taking responsibility for my finances.",
+                initials: "AN",
+                color: "bg-gray-100 text-gray-600"
+              },
+              {
+                name: "Anonymous",
+                role: "Member",
+                text: "It has changed my perspective on Christianity and money.",
+                initials: "AN",
+                color: "bg-gray-100 text-gray-600"
+              }
             ].map((t, i) => (
-              <div key={i} className="bg-white p-8 md:p-10 rounded-[20px] shadow-sm border border-gray-100 flex flex-col h-full hover:shadow-md transition-shadow">
+              <div key={i} className="break-inside-avoid bg-white p-8 md:p-10 rounded-[20px] shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition-shadow">
                 <div className="flex gap-1 text-[#F2994A] mb-8">
                   {[1, 2, 3, 4, 5].map(s => <Star key={s} className="w-4 h-4 fill-current" />)}
                 </div>
-                <p className="text-gray-800 text-[15px] leading-relaxed mb-10 flex-1">{t.text}</p>
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#E5E7EB] shrink-0"></div>
+                <div className="text-gray-800 text-[14px] leading-relaxed mb-10 space-y-4">
+                  {t.text.split('\n\n').map((paragraph, pIdx) => (
+                    <p key={pIdx}>{paragraph}</p>
+                  ))}
+                </div>
+                <div className="flex items-center gap-4 mt-auto pt-6 border-t border-gray-50">
+                  <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-[14px] shrink-0 ${t.color}`}>
+                    {t.initials}
+                  </div>
                   <div>
                     <h4 className="font-mono font-bold text-gray-900 text-[10px] uppercase tracking-wider">{t.name}</h4>
                     <p className="text-[#F2994A] font-mono text-[9px] uppercase tracking-wider mt-1">{t.role}</p>
