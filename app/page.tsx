@@ -159,17 +159,17 @@ export default function Page() {
         </div>
 
         <div className="relative w-full max-w-[1000px] mx-auto mt-16 md:mt-24 aspect-[4/3] sm:aspect-[16/8] md:aspect-[21/9] rounded-[24px] overflow-hidden shadow-2xl border border-gray-200 z-20 mx-6 bg-gray-100">
-          <Image src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2000" alt="Builders meeting" fill className="object-cover opacity-90 mix-blend-multiply" referrerPolicy="no-referrer" />
-          <div className="absolute inset-0 bg-[#0A1A12]/10 flex items-center justify-center">
-            <button className="w-16 h-16 md:w-20 md:h-20 bg-[#F2994A] rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-[0_0_40px_rgba(242,153,74,0.4)] cursor-pointer group">
-              <Play className="text-white w-6 h-6 md:w-8 md:h-8 ml-1 md:ml-1.5 group-hover:scale-110 transition-transform" fill="currentColor" strokeWidth={1} />
-            </button>
-          </div>
+          <iframe 
+            src="https://drive.google.com/file/d/1DlqOxVIlmvVO4gX62E6hqY6mGsXSHILV/preview?autoplay=1&mute=1" 
+            className="w-full h-full border-none absolute inset-0"
+            allow="autoplay; fullscreen"
+            title="Light Bearers Network Video"
+          ></iframe>
         </div>
       </section>
 
       {/* WHY WE EXIST */}
-      <section className="bg-[#F3F4F6] py-20 md:py-32 border-t border-gray-200/50">
+      <section className="bg-[#F3F4F6] py-16 md:py-24 border-t border-gray-200/50">
         <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Quote Card */}
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 relative">
@@ -203,7 +203,7 @@ export default function Page() {
       </section>
 
       {/* SPHERES OF INFLUENCE */}
-      <section className="bg-[#FAFAFA] py-20 md:py-32 border-t border-gray-200/50">
+      <section className="bg-[#FAFAFA] py-16 md:py-24 border-t border-gray-200/50">
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-[44px] font-bold text-gray-900 mb-6 font-display tracking-tight">
@@ -233,7 +233,7 @@ export default function Page() {
       </section>
 
       {/* WHO IS THIS FOR */}
-      <section className="bg-white py-20 md:py-32 border-t border-gray-200/50">
+      <section className="bg-white py-16 md:py-24 border-t border-gray-200/50">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-16 md:mb-20">
             <h2 className="text-3xl md:text-[44px] font-bold text-gray-900 mb-6 font-display tracking-tight">
@@ -285,7 +285,7 @@ export default function Page() {
       </section>
 
       {/* PATHWAYS TO DOMINANCE */}
-      <section className="bg-[#363535] py-20 md:py-32 text-white">
+      <section className="bg-[#363535] py-16 md:py-24 text-white">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="mb-12 md:mb-16">
             <h2 className="text-3xl md:text-[44px] font-bold mb-4 font-display tracking-tight text-white">
@@ -369,7 +369,7 @@ export default function Page() {
       </section>
 
       {/* COMMUNITY GALLERY */}
-      <section className="bg-[#FAFAFA] py-20 md:py-32 border-b border-gray-200/50">
+      <section className="bg-[#FAFAFA] py-16 md:py-24 border-b border-gray-200/50">
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-[44px] font-bold text-gray-900 mb-4 md:mb-6 font-display tracking-tight">
@@ -395,7 +395,7 @@ export default function Page() {
       </section>
 
       {/* WHAT OUR MEMBERS SAY */}
-      <section className="bg-[#F3F4F6] py-20 md:py-32 border-b border-gray-200/50">
+      <section className="bg-[#F3F4F6] py-16 md:py-24 border-b border-gray-200/50">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-[44px] font-bold text-gray-900 mb-4 md:mb-6 font-display tracking-tight">
@@ -516,7 +516,7 @@ export default function Page() {
       </section>
 
       {/* VISIONEER SECTION */}
-      <section className="bg-white py-20 md:py-32 border-t border-gray-200/50">
+      <section className="bg-white py-16 md:py-24 border-t border-gray-200/50">
         <div className="max-w-[800px] mx-auto px-6">
           <div className="text-center mb-10">
             <Quote className="text-[#EAF5ED] h-16 w-16 md:h-20 md:w-20 mx-auto mb-8 md:mb-10 transform -scale-x-100" fill="currentColor" />
