@@ -169,7 +169,7 @@ export default function Page() {
       </section>
 
       {/* WHY WE EXIST */}
-      <section className="bg-[#F3F4F6] py-16 md:py-24 border-t border-gray-200/50">
+      <section className="bg-[#F3F4F6] py-14 md:py-20 border-t border-gray-200/50">
         <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Quote Card */}
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 relative">
@@ -203,7 +203,7 @@ export default function Page() {
       </section>
 
       {/* SPHERES OF INFLUENCE */}
-      <section className="bg-[#FAFAFA] py-16 md:py-24 border-t border-gray-200/50">
+      <section className="bg-[#FAFAFA] py-14 md:py-20 border-t border-gray-200/50">
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-[44px] font-bold text-gray-900 mb-6 font-display tracking-tight">
@@ -233,7 +233,7 @@ export default function Page() {
       </section>
 
       {/* WHO IS THIS FOR */}
-      <section className="bg-white py-16 md:py-24 border-t border-gray-200/50">
+      <section className="bg-white py-14 md:py-20 border-t border-gray-200/50">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-16 md:mb-20">
             <h2 className="text-3xl md:text-[44px] font-bold text-gray-900 mb-6 font-display tracking-tight">
@@ -285,7 +285,7 @@ export default function Page() {
       </section>
 
       {/* PATHWAYS TO DOMINANCE */}
-      <section className="bg-[#363535] py-16 md:py-24 text-white">
+      <section className="bg-[#363535] py-14 md:py-20 text-white">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="mb-12 md:mb-16">
             <h2 className="text-3xl md:text-[44px] font-bold mb-4 font-display tracking-tight text-white">
@@ -369,7 +369,7 @@ export default function Page() {
       </section>
 
       {/* COMMUNITY GALLERY */}
-      <section className="bg-[#FAFAFA] py-16 md:py-24 border-b border-gray-200/50">
+      <section className="bg-[#FAFAFA] py-14 md:py-20 border-b border-gray-200/50">
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-[44px] font-bold text-gray-900 mb-4 md:mb-6 font-display tracking-tight">
@@ -395,7 +395,7 @@ export default function Page() {
       </section>
 
       {/* WHAT OUR MEMBERS SAY */}
-      <section className="bg-[#F3F4F6] py-16 md:py-24 border-b border-gray-200/50">
+      <section className="bg-[#F3F4F6] py-14 md:py-20 border-b border-gray-200/50">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-[44px] font-bold text-gray-900 mb-4 md:mb-6 font-display tracking-tight">
@@ -516,7 +516,7 @@ export default function Page() {
       </section>
 
       {/* VISIONEER SECTION */}
-      <section className="bg-white py-16 md:py-24 border-t border-gray-200/50">
+      <section className="bg-white py-14 md:py-20 border-t border-gray-200/50">
         <div className="max-w-[800px] mx-auto px-6">
           <div className="text-center mb-10">
             <Quote className="text-[#EAF5ED] h-16 w-16 md:h-20 md:w-20 mx-auto mb-8 md:mb-10 transform -scale-x-100" fill="currentColor" />
@@ -538,7 +538,15 @@ export default function Page() {
           </div>
 
           <div className="flex items-center justify-center md:justify-start gap-4 mt-12 pt-10 border-t border-gray-100">
-            <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#107C41] flex items-center justify-center text-white font-bold text-xl md:text-2xl shadow-inner shrink-0">MT</div>
+            <div className="relative w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden shrink-0 shadow-inner bg-gray-100 border border-gray-200">
+              <Image 
+                src="https://drive.google.com/uc?export=view&id=1C_U4wzPFXTzyuGe7aapHAVaufZ1pL9aL" 
+                alt="Macaulay Tekevwe" 
+                fill 
+                className="object-cover" 
+                referrerPolicy="no-referrer"
+              />
+            </div>
             <div className="text-left">
               <h4 className="font-mono text-gray-900 tracking-[0.15em] text-[12px] font-bold uppercase">Macaulay Tekevwe</h4>
               <p className="text-[#F2994A] font-mono text-[10px] tracking-wider uppercase mt-1">Visioneer</p>

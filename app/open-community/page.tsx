@@ -49,7 +49,7 @@ export default function OpenCommunityPage() {
       </section>
 
       {/* DETAILED CONTENT */}
-      <section className="px-6 py-20 bg-[#484848] border-y border-[#555]">
+      <section className="px-6 py-14 bg-[#484848] border-y border-[#555]">
         <div className="max-w-[1000px] mx-auto grid md:grid-cols-2 gap-12 md:gap-16">
           <div>
             <h2 className="text-3xl font-display font-bold mb-6 text-[#107C41]">Structure & Mentality</h2>
@@ -96,7 +96,7 @@ export default function OpenCommunityPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-32 px-6 text-center">
+      <section className="py-14 md:py-14 px-6 text-center">
         <h2 className="text-3xl md:text-5xl font-display font-bold mb-8 leading-tight">Ready to step into your <br className="hidden md:block"/> <span className="text-[#107C41]">placement?</span></h2>
         <button className="bg-[#107C41] hover:bg-[#0c5c30] text-white px-8 py-5 md:px-10 rounded-[4px] font-mono font-bold tracking-[0.1em] transition-colors uppercase text-[12px] md:text-[14px] w-full sm:w-auto">
           Start your growth journey now
