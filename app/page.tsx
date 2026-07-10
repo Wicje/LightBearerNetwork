@@ -60,7 +60,7 @@ export default function Page() {
           <nav className="hidden lg:flex items-center gap-12 font-mono text-[11px] uppercase tracking-[0.2em] text-gray-800">
             <Link href="/academy" className="hover:text-[#F2994A] transition-colors">Academy</Link>
             <Link href="/engaging-room" className="hover:text-[#F2994A] transition-colors">Engaging Room</Link>
-            <Link href="#" className="hover:text-[#F2994A] transition-colors">Pathways</Link>
+            <Link href="/gallery" className="hover:text-[#F2994A] transition-colors">Gallery</Link>
             <Link href="/open-community" className="hover:text-[#F2994A] transition-colors">Community</Link>
           </nav>
 
@@ -108,7 +108,7 @@ export default function Page() {
               <nav className="flex flex-col gap-6 font-mono text-[13px] uppercase tracking-[0.2em] text-gray-800">
                 <Link href="/academy" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#F2994A] transition-colors border-b border-gray-100 pb-4">Academy</Link>
                 <Link href="/engaging-room" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#F2994A] transition-colors border-b border-gray-100 pb-4">Engaging Room</Link>
-                <Link href="#" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#F2994A] transition-colors border-b border-gray-100 pb-4">Pathways</Link>
+                <Link href="/gallery" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#F2994A] transition-colors border-b border-gray-100 pb-4">Gallery</Link>
                 <Link href="/open-community" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#F2994A] transition-colors border-b border-gray-100 pb-4">Community</Link>
               </nav>
 
