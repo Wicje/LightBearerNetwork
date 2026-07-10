@@ -57,7 +57,7 @@ export default function OpenCommunityPage() {
               Inside the Open Community, a structured system is curated to help shape your mentality and show you possibilities that exist.
             </p>
             <p className="text-gray-300 leading-relaxed text-[16px] md:text-[17px]">
-              We believe that excellence in the marketplace is fundamentally tied to an individual's spiritual alignment and clarity of purpose. This space ensures you are always growing, always accountable, and constantly exposed to high-value insights.
+              We believe that excellence in the marketplace is fundamentally tied to an individual&apos;s spiritual alignment and clarity of purpose. This space ensures you are always growing, always accountable, and constantly exposed to high-value insights.
             </p>
           </div>
 

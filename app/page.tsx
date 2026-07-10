@@ -3,13 +3,13 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import FadingGallery from "@/components/FadingGallery";
 import { motion, AnimatePresence } from "motion/react";
 import {
   Play,
   Quote,
   CheckCircle2,
   Instagram,
-  Twitter,
   Phone,
   Globe,
   Briefcase,
@@ -58,15 +58,13 @@ export default function Page() {
           </div>
 
           <nav className="hidden lg:flex items-center gap-12 font-mono text-[11px] uppercase tracking-[0.2em] text-gray-800">
-            <Link href="#" className="hover:text-[#F2994A] transition-colors">Academy</Link>
-            <Link href="#" className="hover:text-[#F2994A] transition-colors">Spheres</Link>
-            <Link href="#" className="hover:text-[#F2994A] transition-colors">Values</Link>
+            <Link href="/academy" className="hover:text-[#F2994A] transition-colors">Academy</Link>
+            <Link href="/engaging-room" className="hover:text-[#F2994A] transition-colors">Engaging Room</Link>
             <Link href="#" className="hover:text-[#F2994A] transition-colors">Pathways</Link>
-            <Link href="#" className="hover:text-[#F2994A] transition-colors">Community</Link>
+            <Link href="/open-community" className="hover:text-[#F2994A] transition-colors">Community</Link>
           </nav>
 
           <div className="hidden lg:flex items-center gap-6 sm:gap-8 font-mono text-[11px] uppercase tracking-[0.15em]">
-            <button className="font-bold text-gray-800 hover:text-[#F2994A] transition-colors">Login</button>
             <button className="bg-[#F2994A] hover:bg-[#df8b40] text-white px-5 py-2.5 sm:px-7 sm:py-3 rounded-[3px] font-bold transition-colors shadow-sm">
               Join the Network
             </button>
@@ -108,19 +106,15 @@ export default function Page() {
             
             <div className="flex-1 overflow-y-auto px-6 py-12 flex flex-col gap-8">
               <nav className="flex flex-col gap-6 font-mono text-[13px] uppercase tracking-[0.2em] text-gray-800">
-                <Link href="#" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#F2994A] transition-colors border-b border-gray-100 pb-4">Academy</Link>
-                <Link href="#" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#F2994A] transition-colors border-b border-gray-100 pb-4">Spheres</Link>
-                <Link href="#" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#F2994A] transition-colors border-b border-gray-100 pb-4">Values</Link>
+                <Link href="/academy" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#F2994A] transition-colors border-b border-gray-100 pb-4">Academy</Link>
+                <Link href="/engaging-room" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#F2994A] transition-colors border-b border-gray-100 pb-4">Engaging Room</Link>
                 <Link href="#" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#F2994A] transition-colors border-b border-gray-100 pb-4">Pathways</Link>
-                <Link href="#" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#F2994A] transition-colors border-b border-gray-100 pb-4">Community</Link>
+                <Link href="/open-community" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#F2994A] transition-colors border-b border-gray-100 pb-4">Community</Link>
               </nav>
 
               <div className="flex flex-col gap-4 font-mono text-[11px] uppercase tracking-[0.15em] mt-auto pb-8">
                 <button onClick={() => setMobileMenuOpen(false)} className="bg-[#F2994A] text-white px-7 py-4 rounded-[3px] font-bold shadow-sm text-center">
                   Join the Network
-                </button>
-                <button onClick={() => setMobileMenuOpen(false)} className="font-bold text-gray-800 py-4 border border-gray-200 rounded-[3px] text-center">
-                  Login
                 </button>
               </div>
             </div>
@@ -152,9 +146,9 @@ export default function Page() {
             <button className="bg-[#107C41] hover:bg-[#0c5c30] text-white px-8 py-3.5 rounded-[4px] text-[12px] font-mono font-bold tracking-[0.1em] flex items-center gap-2 transition-all w-full sm:w-auto justify-center uppercase">
               Join us Today &rarr;
             </button>
-            <button className="bg-transparent border border-gray-800 text-gray-800 px-8 py-3.5 rounded-[4px] text-[12px] font-mono font-bold tracking-[0.1em] hover:bg-gray-100 transition-all w-full sm:w-auto justify-center shadow-sm uppercase">
+            <Link href="/academy" className="bg-transparent border border-gray-800 text-gray-800 px-8 py-3.5 rounded-[4px] text-[12px] font-mono font-bold tracking-[0.1em] hover:bg-gray-100 transition-all w-full sm:w-auto justify-center shadow-sm uppercase text-center">
               Explore Academy
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -175,7 +169,7 @@ export default function Page() {
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 relative">
             <Quote className="text-[#E5E7EB] h-12 w-12 md:h-16 md:w-16 absolute top-6 left-6 md:top-8 md:left-8 transform -scale-x-100" fill="currentColor" />
             <h3 className="text-[20px] sm:text-[24px] md:text-[32px] font-display font-medium text-gray-900 leading-[1.4] md:leading-[1.3] mb-10 md:mb-12 relative z-10 tracking-tight mt-8 md:mt-10">
-              "In this day and time when the world keeps getting darker, it is that set time for Believers to rise in their seat of dominance across all spheres of influence in the Marketplace."
+              &quot;In this day and time when the world keeps getting darker, it is that set time for Believers to rise in their seat of dominance across all spheres of influence in the Marketplace.&quot;
             </h3>
             <div className="flex items-center gap-4 relative z-10">
               <div className="w-12 h-12 rounded-full bg-[#107C41] flex items-center justify-center text-white font-bold text-lg shadow-inner">MT</div>
@@ -320,28 +314,6 @@ export default function Page() {
             </div>
 
             <div className="flex flex-col gap-8 lg:gap-12">
-              {/* Light Bearers Academy */}
-              <div className="bg-[#484848] rounded-[24px] p-6 md:p-10 border border-[#555] flex flex-col relative overflow-hidden group flex-1">
-                <div className="absolute top-0 right-0 p-8 opacity-5 -translate-y-1/4 translate-x-1/4 group-hover:scale-110 transition-transform duration-500">
-                  <GraduationCap className="w-48 h-48 text-white" />
-                </div>
-                <div className="relative z-10 flex flex-col h-full">
-                  <div className="w-12 h-12 rounded bg-[#F2994A] flex items-center justify-center mb-6 md:mb-8">
-                    <GraduationCap className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-[#107C41] text-2xl md:text-3xl font-display font-bold mb-4">Light Bearers Academy</h3>
-                  <p className="text-gray-400 text-[15px] mb-8 leading-relaxed">
-                    Designed to equip believers with structured teachings, frameworks, and actionable strategies for marketplace dominance.
-                  </p>
-                  
-                  <div className="mt-auto pt-8 flex items-center justify-center border-t border-[#555] border-dashed">
-                    <span className="text-[#F2994A] font-mono text-[12px] uppercase tracking-[0.2em] font-bold bg-[#F2994A]/10 px-4 py-2 rounded-full">
-                      Coming Soon
-                    </span>
-                  </div>
-                </div>
-              </div>
-
               {/* Engaging Room */}
               <div className="bg-[#484848] rounded-[24px] p-6 md:p-10 border border-[#555] flex flex-col relative overflow-hidden group flex-1">
                 <div className="absolute top-0 right-0 p-8 opacity-5 -translate-y-1/4 translate-x-1/4 group-hover:scale-110 transition-transform duration-500">
@@ -356,10 +328,34 @@ export default function Page() {
                     A highly focused, interactive space designed for personalized problem-solving, strategic mastermind sessions, and direct mentorship.
                   </p>
                   
-                  <div className="mt-auto pt-8 flex items-center justify-center border-t border-[#555] border-dashed">
-                    <span className="text-gray-400 font-mono text-[12px] uppercase tracking-[0.2em] font-bold bg-gray-600/30 px-4 py-2 rounded-full">
-                      Coming Soon
-                    </span>
+                  <div className="mt-auto pt-8 border-t border-[#555] border-dashed">
+                    <Link href="/engaging-room" className="group flex items-center justify-between text-gray-400 hover:text-white transition-colors w-full">
+                      <span className="font-mono text-[12px] uppercase tracking-[0.2em] font-bold">Explore Room</span>
+                      <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Light Bearers Academy */}
+              <div className="bg-[#484848] rounded-[24px] p-6 md:p-10 border border-[#555] flex flex-col relative overflow-hidden group flex-1">
+                <div className="absolute top-0 right-0 p-8 opacity-5 -translate-y-1/4 translate-x-1/4 group-hover:scale-110 transition-transform duration-500">
+                  <GraduationCap className="w-48 h-48 text-white" />
+                </div>
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="w-12 h-12 rounded bg-[#F2994A] flex items-center justify-center mb-6 md:mb-8">
+                    <GraduationCap className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-[#107C41] text-2xl md:text-3xl font-display font-bold mb-4">Light Bearers Academy</h3>
+                  <p className="text-gray-400 text-[15px] mb-8 leading-relaxed">
+                    Designed to equip believers with structured teachings, frameworks, and actionable strategies for marketplace dominance.
+                  </p>
+                  
+                  <div className="mt-auto pt-8 border-t border-[#555] border-dashed">
+                    <Link href="/academy" className="group flex items-center justify-between text-[#F2994A] hover:text-[#f8b475] transition-colors w-full">
+                      <span className="font-mono text-[12px] uppercase tracking-[0.2em] font-bold">Explore Academy</span>
+                      <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -377,19 +373,12 @@ export default function Page() {
             </h2>
             <p className="text-gray-600 text-[16px] md:text-[17px]">Moments from our gatherings, trainings, and community events.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            <div className="aspect-square bg-gray-200 rounded-2xl overflow-hidden relative">
-              <Image src="https://drive.google.com/uc?export=view&id=1oW_8eyaaLgCGJM3zHfFRJIOA9utn6WUS" alt="Gallery 1" fill className="object-cover" referrerPolicy="no-referrer" />
-            </div>
-            <div className="aspect-square bg-gray-200 rounded-2xl overflow-hidden relative">
-              <Image src="https://drive.google.com/uc?export=view&id=1UKW9Xa9eMXZhOY2oJ9xq07SJJelKQE2J" alt="Gallery 2" fill className="object-cover" referrerPolicy="no-referrer" />
-            </div>
-            <div className="aspect-square bg-gray-200 rounded-2xl overflow-hidden relative">
-              <Image src="https://drive.google.com/uc?export=view&id=1hocBSjfaxgXhkQF3Qczp-R_IBuECKzub" alt="Gallery 3" fill className="object-cover" referrerPolicy="no-referrer" />
-            </div>
-            <div className="aspect-square bg-gray-200 rounded-2xl overflow-hidden relative">
-              <Image src="https://drive.google.com/uc?export=view&id=14N2aW3hKRkq2ySqQCMXYI35LIOkF8DMM" alt="Gallery 4" fill className="object-cover" referrerPolicy="no-referrer" />
-            </div>
+          <FadingGallery />
+          
+          <div className="mt-12 text-center">
+            <Link href="/gallery" className="inline-block bg-[#107C41] hover:bg-[#0c5c30] text-white px-8 py-4 rounded-[4px] font-mono font-bold tracking-[0.1em] transition-all uppercase text-[12px]">
+              See All Pictures
+            </Link>
           </div>
         </div>
       </section>
@@ -570,11 +559,13 @@ export default function Page() {
                 Raising a people that will understand their spheres of influence, their destiny placement and climb to their seat of dominance.
               </p>
               <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:text-[#F2994A] hover:border-[#F2994A] transition-colors">
+                <a href="https://www.instagram.com/light_bearersn?igsh=MWlpYnhvdW1od21lcw==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:text-[#F2994A] hover:border-[#F2994A] transition-colors">
                   <Instagram className="w-4 h-4" />
                 </a>
-                <a href="#" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:text-[#F2994A] hover:border-[#F2994A] transition-colors">
-                  <Twitter className="w-4 h-4" />
+                <a href="https://tiktok.com/@light_bearsen" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:text-[#F2994A] hover:border-[#F2994A] transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-4 h-4" fill="currentColor">
+                    <path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25v178.72A162.55 162.55 0 1 1 185 188.31v89.89a74.62 74.62 0 1 0 52.23 71.18V0h88a121.18 121.18 0 0 0 1.86 22.17h.12A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z"/>
+                  </svg>
                 </a>
               </div>
             </div>
@@ -582,10 +573,10 @@ export default function Page() {
             <div className="md:col-span-3 lg:col-start-8">
               <h4 className="font-mono font-bold text-gray-900 text-[10px] uppercase tracking-[0.15em] mb-6">QUICK LINKS</h4>
               <ul className="space-y-4">
-                <li><a href="#" className="text-gray-600 hover:text-[#F2994A] text-sm transition-colors">Home</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-[#F2994A] text-sm transition-colors">About Us</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-[#F2994A] text-sm transition-colors">Academy</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-[#F2994A] text-sm transition-colors">Community</a></li>
+                <li><Link href="/" className="text-gray-600 hover:text-[#F2994A] text-sm transition-colors">Home</Link></li>
+                <li><Link href="/academy" className="text-gray-600 hover:text-[#F2994A] text-sm transition-colors">Academy</Link></li>
+                <li><Link href="/engaging-room" className="text-gray-600 hover:text-[#F2994A] text-sm transition-colors">Engaging Room</Link></li>
+                <li><Link href="/open-community" className="text-gray-600 hover:text-[#F2994A] text-sm transition-colors">Community</Link></li>
               </ul>
             </div>
 
