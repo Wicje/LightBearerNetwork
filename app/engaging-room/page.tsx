@@ -1,12 +1,17 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { Target, ChevronRight, ArrowLeft } from "lucide-react";
+import ApplicationModal from "@/components/ApplicationModal";
 
 export default function EngagingRoomPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <main className="min-h-screen bg-[#363535] text-white selection:bg-[#F2994A] selection:text-white pb-32">
+      <ApplicationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} pathway="engaging-room" />
       {/* HEADER */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#363535]/90 backdrop-blur-md border-b border-[#555]">
         <div className="max-w-[1400px] mx-auto px-6 h-20 flex items-center">
@@ -44,7 +49,7 @@ export default function EngagingRoomPage() {
             We provide the structure, accountability, and support to help you make measurable progress every month.
           </p>
 
-          <button className="bg-[#F2994A] hover:bg-[#df8b40] text-white px-8 py-4 rounded-[4px] font-mono font-bold tracking-[0.1em] transition-all uppercase text-[12px] flex items-center gap-2 justify-center w-full sm:w-auto hover:scale-105 active:scale-95">
+          <button onClick={() => setIsModalOpen(true)} className="bg-[#F2994A] hover:bg-[#df8b40] text-white px-8 py-4 rounded-[4px] font-mono font-bold tracking-[0.1em] transition-all uppercase text-[12px] flex items-center gap-2 justify-center w-full sm:w-auto hover:scale-105 active:scale-95">
             Join the Engaging Room <ChevronRight className="w-4 h-4" />
           </button>
         </motion.div>
@@ -106,7 +111,7 @@ export default function EngagingRoomPage() {
       {/* CTA */}
       <section className="py-20 md:py-32 px-6 text-center">
         <h2 className="text-3xl md:text-5xl font-display font-bold mb-8 leading-tight">Ready to produce <br className="hidden md:block"/> <span className="text-[#F2994A]">measurable results?</span></h2>
-        <button className="bg-[#107C41] hover:bg-[#0c5c30] text-white px-8 py-5 md:px-10 rounded-[4px] font-mono font-bold tracking-[0.1em] transition-colors uppercase text-[12px] md:text-[14px] w-full sm:w-auto">
+        <button onClick={() => setIsModalOpen(true)} className="bg-[#107C41] hover:bg-[#0c5c30] text-white px-8 py-5 md:px-10 rounded-[4px] font-mono font-bold tracking-[0.1em] transition-colors uppercase text-[12px] md:text-[14px] w-full sm:w-auto">
           Join the Engaging Room
         </button>
       </section>

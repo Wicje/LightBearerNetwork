@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ImageIcon } from "lucide-react";
+import { ArrowLeft, Images } from "lucide-react";
 import { motion } from "motion/react";
 
 const IMAGES = [
@@ -34,8 +34,8 @@ export default function GalleryPage() {
 
       {/* HEADER TITLE */}
       <section className="pt-40 pb-16 px-6 text-center">
-        <div className="w-16 h-16 rounded-xl bg-gray-200 flex items-center justify-center mb-8 mx-auto">
-          <ImageIcon className="w-8 h-8 text-gray-500" />
+        <div className="w-16 h-16 rounded-2xl bg-orange-50 flex items-center justify-center mb-8 mx-auto border border-orange-100 shadow-sm">
+          <Images className="w-8 h-8 text-[#F2994A]" />
         </div>
         <h1 className="text-4xl sm:text-5xl font-bold font-display tracking-tight text-gray-900 mb-6">
           Community <span className="text-[#F2994A]">Gallery</span>
