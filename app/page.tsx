@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import ApplicationModal from "@/components/ApplicationModal";
 import FadingGallery from "@/components/FadingGallery";
 import { motion, AnimatePresence } from "motion/react";
 import {
@@ -32,6 +33,7 @@ import {
 
 export default function Page() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -47,6 +49,7 @@ export default function Page() {
 
   return (
     <div className="min-h-screen flex flex-col font-sans text-gray-900 bg-[#FAFAFA] selection:bg-[#F2994A] selection:text-white">
+      <ApplicationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} pathway="network" />
       {/* HEADER */}
       <header className="absolute inset-x-0 top-0 z-50 bg-[#FAFAFA]/80 backdrop-blur-sm border-b border-gray-100/50">
         <div className="max-w-[1400px] mx-auto px-6 h-[88px] flex items-center justify-between">
@@ -65,7 +68,7 @@ export default function Page() {
           </nav>
 
           <div className="hidden lg:flex items-center gap-6 sm:gap-8 font-mono text-[11px] uppercase tracking-[0.15em]">
-            <button className="bg-[#F2994A] hover:bg-[#df8b40] text-white px-5 py-2.5 sm:px-7 sm:py-3 rounded-[3px] font-bold transition-colors shadow-sm">
+            <button onClick={() => setIsModalOpen(true)} className="bg-[#F2994A] hover:bg-[#df8b40] text-white px-5 py-2.5 sm:px-7 sm:py-3 rounded-[3px] font-bold transition-colors shadow-sm">
               Join the Network
             </button>
           </div>
@@ -113,7 +116,7 @@ export default function Page() {
               </nav>
 
               <div className="flex flex-col gap-4 font-mono text-[11px] uppercase tracking-[0.15em] mt-auto pb-8">
-                <button onClick={() => setMobileMenuOpen(false)} className="bg-[#F2994A] text-white px-7 py-4 rounded-[3px] font-bold shadow-sm text-center">
+                <button onClick={() => { setMobileMenuOpen(false); setIsModalOpen(true); }} className="bg-[#F2994A] text-white px-7 py-4 rounded-[3px] font-bold shadow-sm text-center">
                   Join the Network
                 </button>
               </div>

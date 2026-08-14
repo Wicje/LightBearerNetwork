@@ -11,12 +11,7 @@ const IMAGES = [
   "https://drive.google.com/uc?export=view&id=1hocBSjfaxgXhkQF3Qczp-R_IBuECKzub",
   "https://drive.google.com/uc?export=view&id=14N2aW3hKRkq2ySqQCMXYI35LIOkF8DMM",
   "https://drive.google.com/uc?export=view&id=1EL_ERDg1-VT8B4HsdJa4R_MLC_oy3zjR",
-  "https://drive.google.com/uc?export=view&id=1xQ-n0df3uwpDGa0wTGckWHW8EEX-nL4R",
-  "https://drive.google.com/uc?export=view&id=1ZeZD3wim6lfWnWlAaktl1Iom9GZXgAR3",
-  "https://drive.google.com/uc?export=view&id=1UOnY9r7Yc36p5M9U2czpCB9ih6CX9EIp",
-  "https://drive.google.com/uc?export=view&id=1NHyWHQLy_WxQwQGsbwew7XPBzpma7h0C",
-  "https://drive.google.com/uc?export=view&id=1KDl2iVN7x79fGwnLv6AlHyiVc6yuESeH",
-  "https://drive.google.com/uc?export=view&id=1YYFC6AEW3BsO_qMSmC-NIUc9BV5icvpu"
+  "https://drive.google.com/uc?export=view&id=1xQ-n0df3uwpDGa0wTGckWHW8EEX-nL4R"
 ];
 
 export default function GalleryPage() {
