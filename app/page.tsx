@@ -146,7 +146,7 @@ export default function Page() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="bg-[#107C41] hover:bg-[#0c5c30] text-white px-8 py-3.5 rounded-[4px] text-[12px] font-mono font-bold tracking-[0.1em] flex items-center gap-2 transition-all w-full sm:w-auto justify-center uppercase">
+            <button onClick={() => setIsModalOpen(true)} className="bg-[#107C41] hover:bg-[#0c5c30] text-white px-8 py-3.5 rounded-[4px] text-[12px] font-mono font-bold tracking-[0.1em] flex items-center gap-2 transition-all w-full sm:w-auto justify-center uppercase">
               Join us Today &rarr;
             </button>
             <Link href="/academy" className="bg-transparent border border-gray-800 text-gray-800 px-8 py-3.5 rounded-[4px] text-[12px] font-mono font-bold tracking-[0.1em] hover:bg-gray-100 transition-all w-full sm:w-auto justify-center shadow-sm uppercase text-center">

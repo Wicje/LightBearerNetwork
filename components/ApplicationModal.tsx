@@ -71,9 +71,6 @@ export default function ApplicationModal({ isOpen, onClose, pathway }: Applicati
       
       if (response.ok) {
         setIsSuccess(true);
-        setTimeout(() => {
-          onClose();
-        }, 4000);
       } else {
         alert("Something went wrong. Please try again.");
       }
@@ -121,9 +118,19 @@ export default function ApplicationModal({ isOpen, onClose, pathway }: Applicati
                     <CheckCircle2 className="w-24 h-24 mx-auto mb-6" style={{ color: brandColor }} />
                   </motion.div>
                   <h3 className="text-3xl font-bold font-display mb-4">Application Received!</h3>
-                  <p className="text-lg opacity-80 max-w-md mx-auto">
-                    Welcome to the journey. We will review your details and you will be directed to join the community shortly.
+                  <p className="text-lg opacity-80 max-w-md mx-auto mb-8">
+                    Welcome to the journey. You will now be directed to join the community.
                   </p>
+                  <a
+                    href="https://t.me/+LXLkTp4tmU1jMjRk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={onClose}
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-bold text-white shadow-md hover:opacity-90 transition-opacity"
+                    style={{ backgroundColor: brandColor }}
+                  >
+                    Join the Community
+                  </a>
                 </div>
               ) : (
                 <>
@@ -182,6 +189,8 @@ export default function ApplicationModal({ isOpen, onClose, pathway }: Applicati
                             <label className={`text-sm font-medium ${labelColor}`}>Phone Number (WhatsApp)</label>
                             <input
                               type="tel" required value={formData.phone}
+                              pattern="[+()0-9][0-9 ()-]{6,19}"
+                              title="Enter a valid phone number, e.g. +2348012345678"
                               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                               className={`w-full px-4 py-3 rounded-lg border outline-none transition-colors ${inputBg}`}
                               placeholder="+234..."
@@ -207,7 +216,7 @@ export default function ApplicationModal({ isOpen, onClose, pathway }: Applicati
                             />
                           </div>
                           <div className="space-y-1.5">
-                            <label className={`text-sm font-medium ${labelColor}`}>Social Media Handle (Main)</label>
+                              <label className={`text-sm font-medium ${labelColor}`}>Social Media Handle (main platform you&apos;re active on)</label>
                             <input
                               type="text" required value={formData.socialMedia}
                               onChange={(e) => setFormData({ ...formData, socialMedia: e.target.value })}
