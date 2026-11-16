@@ -40,6 +40,8 @@ type HomeClientProps = {
 export default function HomeClient({ testimonials, galleryImages }: HomeClientProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [pathway, setPathway] = useState<"network" | "engaging-room" | "academy">("network");
+  const openModal = (p: "network" | "engaging-room" | "academy") => { setPathway(p); setIsModalOpen(true); };
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -55,7 +57,7 @@ export default function HomeClient({ testimonials, galleryImages }: HomeClientPr
 
   return (
     <div className="min-h-screen flex flex-col font-sans text-gray-900 bg-[#FAFAFA] selection:bg-[#F2994A] selection:text-white">
-      <ApplicationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} pathway="network" />
+      <ApplicationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} pathway={pathway} />
       {/* HEADER */}
       <header className="absolute inset-x-0 top-0 z-50 bg-[#FAFAFA]/80 backdrop-blur-sm border-b border-gray-100/50">
         <div className="max-w-[1400px] mx-auto px-6 h-[88px] flex items-center justify-between">
@@ -74,7 +76,7 @@ export default function HomeClient({ testimonials, galleryImages }: HomeClientPr
           </nav>
 
           <div className="hidden lg:flex items-center gap-6 sm:gap-8 font-mono text-[11px] uppercase tracking-[0.15em]">
-            <button onClick={() => setIsModalOpen(true)} className="bg-[#F2994A] hover:bg-[#df8b40] text-white px-5 py-2.5 sm:px-7 sm:py-3 rounded-[3px] font-bold transition-colors shadow-sm">
+            <button onClick={() => openModal("network")} className="bg-[#F2994A] hover:bg-[#df8b40] text-white px-5 py-2.5 sm:px-7 sm:py-3 rounded-[3px] font-bold transition-colors shadow-sm">
               Join the Network
             </button>
           </div>
@@ -122,7 +124,7 @@ export default function HomeClient({ testimonials, galleryImages }: HomeClientPr
               </nav>
 
               <div className="flex flex-col gap-4 font-mono text-[11px] uppercase tracking-[0.15em] mt-auto pb-8">
-                <button onClick={() => { setMobileMenuOpen(false); setIsModalOpen(true); }} className="bg-[#F2994A] text-white px-7 py-4 rounded-[3px] font-bold shadow-sm text-center">
+                <button onClick={() => { setMobileMenuOpen(false); openModal("network"); }} className="bg-[#F2994A] text-white px-7 py-4 rounded-[3px] font-bold shadow-sm text-center">
                   Join the Network
                 </button>
               </div>
@@ -152,12 +154,12 @@ export default function HomeClient({ testimonials, galleryImages }: HomeClientPr
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button onClick={() => setIsModalOpen(true)} className="bg-[#107C41] hover:bg-[#0c5c30] text-white px-8 py-3.5 rounded-[4px] text-[12px] font-mono font-bold tracking-[0.1em] flex items-center gap-2 transition-all w-full sm:w-auto justify-center uppercase">
+            <button onClick={() => openModal("network")} className="bg-[#107C41] hover:bg-[#0c5c30] text-white px-8 py-3.5 rounded-[4px] text-[12px] font-mono font-bold tracking-[0.1em] flex items-center gap-2 transition-all w-full sm:w-auto justify-center uppercase">
               Join us Today &rarr;
             </button>
-            <Link href="/academy" className="bg-transparent border border-gray-800 text-gray-800 px-8 py-3.5 rounded-[4px] text-[12px] font-mono font-bold tracking-[0.1em] hover:bg-gray-100 transition-all w-full sm:w-auto justify-center shadow-sm uppercase text-center">
-              Explore Academy
-            </Link>
+            <button onClick={() => openModal("engaging-room")} className="bg-transparent border border-gray-800 text-gray-800 px-8 py-3.5 rounded-[4px] text-[12px] font-mono font-bold tracking-[0.1em] hover:bg-gray-100 transition-all w-full sm:w-auto justify-center shadow-sm uppercase text-center">
+              Join Engaging Room
+            </button>
           </div>
         </div>
 
@@ -329,20 +331,17 @@ export default function HomeClient({ testimonials, galleryImages }: HomeClientPr
                   <Target className="w-48 h-48 text-white" />
                 </div>
                 <div className="relative z-10 flex flex-col h-full">
-                  <div className="w-12 h-12 rounded bg-gray-600 flex items-center justify-center mb-6 md:mb-8">
-                    <Target className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 rounded bg-gradient-to-br from-[#FFB703] to-[#F2994A] flex items-center justify-center mb-6 md:mb-8 shadow-lg shadow-[#F2994A]/30">
+                    <span className="text-white font-bold text-[12px] tracking-widest leading-none pt-0.5">LBN</span>
                   </div>
                   <h3 className="text-white text-2xl md:text-3xl font-display font-bold mb-4">Engaging Room</h3>
                   <p className="text-gray-400 text-[15px] mb-8 leading-relaxed">
                     A highly focused, interactive space designed for personalized problem-solving, strategic mastermind sessions, and direct mentorship.
                   </p>
                   
-                  <div className="mt-auto pt-8 border-t border-[#555] border-dashed">
-                    <Link href="/engaging-room" className="group flex items-center justify-between text-gray-400 hover:text-white transition-colors w-full">
-                      <span className="font-mono text-[12px] uppercase tracking-[0.2em] font-bold">Explore Room</span>
-                      <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </div>
+                  <Link href="/engaging-room" className="w-full bg-[#F2994A] hover:bg-[#df8b40] text-white py-4 rounded-[4px] font-mono text-[11px] uppercase tracking-[0.15em] font-bold transition-colors flex items-center justify-center gap-2 mt-auto relative z-20">
+                    Explore Engaging Room <ChevronRight className="w-4 h-4" />
+                  </Link>
                 </div>
               </div>
 
