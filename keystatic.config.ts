@@ -5,7 +5,7 @@ export default config({
     kind: 'cloud',
   },
   cloud: {
-    project: 'your-team/your-project',
+    project: 'light-bearer-network/lightbearernetwork',
   },
   collections: {
     testimonials: collection({
