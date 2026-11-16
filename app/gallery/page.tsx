@@ -1,20 +1,17 @@
-"use client";
-
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Images } from "lucide-react";
-import { motion } from "motion/react";
+import GalleryGrid from "@/components/GalleryGrid";
+import { reader } from "@/lib/reader";
+import { GALLERY_FALLBACK } from "@/lib/content";
 
-const IMAGES = [
-  "https://drive.google.com/uc?export=view&id=1oW_8eyaaLgCGJM3zHfFRJIOA9utn6WUS",
-  "https://drive.google.com/uc?export=view&id=1UKW9Xa9eMXZhOY2oJ9xq07SJJelKQE2J",
-  "https://drive.google.com/uc?export=view&id=1hocBSjfaxgXhkQF3Qczp-R_IBuECKzub",
-  "https://drive.google.com/uc?export=view&id=14N2aW3hKRkq2ySqQCMXYI35LIOkF8DMM",
-  "https://drive.google.com/uc?export=view&id=1EL_ERDg1-VT8B4HsdJa4R_MLC_oy3zjR",
-  "https://drive.google.com/uc?export=view&id=1xQ-n0df3uwpDGa0wTGckWHW8EEX-nL4R"
-];
+export default async function GalleryPage() {
+  const gallery = await reader.singletons.gallery.read();
+  const images = gallery?.images?.length
+    ? gallery.images
+        .filter((image) => Boolean(image.url))
+        .map((image) => ({ url: image.url as string, alt: image.alt }))
+    : GALLERY_FALLBACK;
 
-export default function GalleryPage() {
   return (
     <main className="min-h-screen bg-[#FAFAFA] pb-32">
       {/* HEADER */}
@@ -42,25 +39,7 @@ export default function GalleryPage() {
 
       {/* GRID */}
       <section className="px-6">
-        <div className="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
-          {IMAGES.map((src, idx) => (
-            <motion.div 
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="aspect-square bg-gray-200 rounded-2xl overflow-hidden relative shadow-sm border border-gray-200"
-            >
-              <Image 
-                src={src} 
-                alt={`Gallery image ${idx + 1}`} 
-                fill 
-                className="object-cover hover:scale-105 transition-transform duration-700" 
-                referrerPolicy="no-referrer"
-              />
-            </motion.div>
-          ))}
-        </div>
+        <GalleryGrid images={images} />
       </section>
     </main>
   );

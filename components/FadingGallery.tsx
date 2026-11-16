@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 
-const IMAGES = [
+const DEFAULT_IMAGES = [
   "https://drive.google.com/uc?export=view&id=1oW_8eyaaLgCGJM3zHfFRJIOA9utn6WUS",
   "https://drive.google.com/uc?export=view&id=1UKW9Xa9eMXZhOY2oJ9xq07SJJelKQE2J",
   "https://drive.google.com/uc?export=view&id=1hocBSjfaxgXhkQF3Qczp-R_IBuECKzub",
@@ -13,7 +13,8 @@ const IMAGES = [
   "https://drive.google.com/uc?export=view&id=1xQ-n0df3uwpDGa0wTGckWHW8EEX-nL4R"
 ];
 
-export default function FadingGallery() {
+export default function FadingGallery({ images = DEFAULT_IMAGES }: { images?: string[] }) {
+  const IMAGES = images.length ? images : DEFAULT_IMAGES;
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -21,7 +22,7 @@ export default function FadingGallery() {
       setCurrentIndex((prev) => (prev + 1) % IMAGES.length);
     }, 4000); // Change image every 4 seconds
     return () => clearInterval(timer);
-  }, []);
+  }, [IMAGES.length]);
 
   return (
     <div className="w-full max-w-[800px] mx-auto aspect-[4/3] sm:aspect-[16/9] bg-gray-200 rounded-2xl overflow-hidden relative shadow-lg">
