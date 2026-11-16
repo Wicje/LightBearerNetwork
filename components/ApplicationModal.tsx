@@ -122,7 +122,7 @@ export default function ApplicationModal({ isOpen, onClose, pathway }: Applicati
                     Welcome to the journey. You will now be directed to join the community.
                   </p>
                   <a
-                    href="https://t.me/+LXLkTp4tmU1jMjRk"
+                    href="https://wa.link/mrzv56"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={onClose}

@@ -157,9 +157,9 @@ export default function HomeClient({ testimonials, galleryImages }: HomeClientPr
             <button onClick={() => openModal("network")} className="bg-[#107C41] hover:bg-[#0c5c30] text-white px-8 py-3.5 rounded-[4px] text-[12px] font-mono font-bold tracking-[0.1em] flex items-center gap-2 transition-all w-full sm:w-auto justify-center uppercase">
               Join us Today &rarr;
             </button>
-            <button onClick={() => openModal("engaging-room")} className="bg-transparent border border-gray-800 text-gray-800 px-8 py-3.5 rounded-[4px] text-[12px] font-mono font-bold tracking-[0.1em] hover:bg-gray-100 transition-all w-full sm:w-auto justify-center shadow-sm uppercase text-center">
-              Join Engaging Room
-            </button>
+            <Link href="/engaging-room" className="bg-transparent border border-gray-800 text-gray-800 px-8 py-3.5 rounded-[4px] text-[12px] font-mono font-bold tracking-[0.1em] hover:bg-gray-100 transition-all w-full sm:w-auto justify-center shadow-sm uppercase text-center">
+              Explore Engaging Room
+            </Link>
           </div>
         </div>
 
