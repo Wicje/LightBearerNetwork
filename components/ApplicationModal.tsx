@@ -117,9 +117,9 @@ export default function ApplicationModal({ isOpen, onClose, pathway }: Applicati
                   >
                     <CheckCircle2 className="w-24 h-24 mx-auto mb-6" style={{ color: brandColor }} />
                   </motion.div>
-                  <h3 className="text-3xl font-bold font-display mb-4">Application Received!</h3>
+                  <h3 className="text-3xl font-bold font-display mb-4">Congratulations 🎉</h3>
                   <p className="text-lg opacity-80 max-w-md mx-auto mb-8">
-                    Welcome to the journey. You will now be directed to join the community.
+                    Welcome to the Light Bearers Network. You will now be directed to the Community for Onboarding.
                   </p>
                   <a
                     href="https://wa.link/mrzv56"
